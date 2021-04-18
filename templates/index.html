@@ -15,9 +15,11 @@
     </div>
 </form>
 
-Price in hours: <b>{{ price_in_hours }}</b> (That's {{ price_in_hours*60 }} minutes!)
 
+{% if has_price_in_hours %}
+Price in hours: <b>{{ price_in_hours }}</b> (That's {{ price_in_minutes }} minutes!)
 <br>
 Assuming you work 262 working days in a year, 8 hours a day.
+{% endif %}
 
 {% endblock %}

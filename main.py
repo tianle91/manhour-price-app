@@ -15,8 +15,13 @@ def index():
         hourly_income = yearly_income / (262 * 8)
         price_in_hours = price / hourly_income
         price_in_minutes = price_in_hours * 60.
+    has_price_in_hours = price_in_hours is not None
     return render_template(
-        'index.html', price_in_hours=price_in_hours, price_in_minutes=price_in_minutes)
+        'index.html',
+        has_price_in_hours=has_price_in_hours,
+        price_in_hours=price_in_hours,
+        price_in_minutes=price_in_minutes
+    )
 
 
 if __name__ == '__main__':
