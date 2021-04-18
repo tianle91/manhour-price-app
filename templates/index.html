@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Price in Hours {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        Yearly Income (in Thousands):
+        <input type="text" name="yearly-income-in-thousands" placeholder="100" class="form-control"
+            value="{{ request.form['yearly-income-in-thousands'] }}">
+        Price:
+        <input type="text" name="price" placeholder="10.99" class="form-control" value="{{ request.form['price'] }}">
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+Price in hours: {{ price_in_hours }}
+
+{% endblock %}
