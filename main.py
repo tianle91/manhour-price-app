@@ -7,13 +7,16 @@ app = Flask(__name__)
 @app.route('/', methods=('GET', 'POST'))
 def index():
     price_in_hours = None
+    price_in_minutes = None
     if request.method == 'POST':
         yearly_income = 1000. * float(request.form['yearly-income-in-thousands'])
         price = float(request.form['price'].strip().lower())
         # 262 working days, 8 hours a day
         hourly_income = yearly_income / (262 * 8)
         price_in_hours = price / hourly_income
-    return render_template('index.html', price_in_hours=price_in_hours)
+        price_in_minutes = price_in_hours * 60.
+    return render_template(
+        'index.html', price_in_hours=price_in_hours, price_in_minutes=price_in_minutes)
 
 
 if __name__ == '__main__':
