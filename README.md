@@ -1,2 +1,2 @@
-# python-template
-Template intended for development in a Visual Studio Code Remote - Containers environment.
+# Manhour Prices
+How much does something cost in terms of labour hours (aka division as a *free* service).
