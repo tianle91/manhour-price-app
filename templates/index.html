@@ -6,10 +6,11 @@
 <form method="post">
     <div class="form-group">
         Yearly Income (in Thousands):
-        <input type="text" name="yearly-income-in-thousands" placeholder="100" class="form-control"
-            value="{{ request.form['yearly-income-in-thousands'] }}">
+        <input type="text" name="yearly-k" placeholder="50" class="form-control"
+            value="{{ 50 or request.form['yearly-k'] }}">
         Price:
-        <input type="text" name="price" placeholder="10.99" class="form-control" value="{{ request.form['price'] }}">
+        <input type="text" name="price" placeholder="10.99" class="form-control" 
+            value="{{ 10.99 or request.form['price'] }}">
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
