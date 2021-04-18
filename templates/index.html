@@ -7,10 +7,10 @@
     <div class="form-group">
         Yearly Income (in Thousands):
         <input type="text" name="yearly-k" placeholder="50" class="form-control"
-            value="{{ 50 or request.form['yearly-k'] }}">
+            value="{{ request.form['yearly-k'] or 50 }}">
         Price:
         <input type="text" name="price" placeholder="4.15" class="form-control" 
-            value="{{ 4.15 or request.form['price'] }}">
+            value="{{ request.form['price'] or 4.15 }}">
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
