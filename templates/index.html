@@ -8,19 +8,22 @@
         Monthly Income:
         <input type="text" name="monthly-income" placeholder="50" class="form-control"
             value="{{ request.form['monthly-income'] or 4000 }}">
+        Monthly Hours Worked:
+        <input type="text" name="monthly-hours" placeholder="50" class="form-control"
+            value="{{ request.form['monthly-hours'] or 22 }}">
         Price:
-        <input type="text" name="price" placeholder="4.15" class="form-control" 
-            value="{{ request.form['price'] or 4.15 }}">
+        <input type="text" name="price" placeholder="5" class="form-control" 
+            value="{{ request.form['price'] or 5 }}">
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
 
 
-{% if has_price_in_hours %}
-Price in hours: <b>{{ price_in_hours }}</b> (That's {{ price_in_minutes }} minutes!)
-<br>
-Assuming you work 262 working days in a year, 8 hours a day.
+{% if has_price_in_minutes %}
+Price:
+<b>{{ price_in_hours }} hours</b>
+(That's {{ price_in_minutes }} minutes!)
 {% endif %}
 
 {% endblock %}
