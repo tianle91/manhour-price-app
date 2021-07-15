@@ -5,9 +5,9 @@
 
 <form method="post">
     <div class="form-group">
-        Yearly Income (in Thousands):
-        <input type="text" name="yearly-k" placeholder="50" class="form-control"
-            value="{{ request.form['yearly-k'] or 50 }}">
+        Monthly Income:
+        <input type="text" name="monthly-income" placeholder="50" class="form-control"
+            value="{{ request.form['monthly-income'] or 4000 }}">
         Price:
         <input type="text" name="price" placeholder="4.15" class="form-control" 
             value="{{ request.form['price'] or 4.15 }}">

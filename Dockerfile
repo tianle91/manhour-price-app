@@ -5,5 +5,3 @@ RUN pip install -r requirements.txt
 
 COPY ./requirements-dev.txt ./
 RUN pip install -r requirements-dev.txt
-
-ENV FLASK_APP main.py
