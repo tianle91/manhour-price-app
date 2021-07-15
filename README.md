@@ -2,6 +2,10 @@
 How much does something cost in terms of labour hours (aka division as a service).
 [Hosted here](https://manhour-price-app.nn.r.appspot.com)
 
+Looks like this.
+
+<img src="./screenshot.png" width="400">
+
 ## Deployment
 
 local test
