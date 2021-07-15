@@ -6,13 +6,13 @@
 <form method="post">
     <div class="form-group">
         Monthly Income:
-        <input type="text" name="monthly-income" placeholder="5500 (Avg NYC)" class="form-control"
+        <input type="text" name="monthly-income" placeholder="5500" class="form-control"
             value="{{ request.form['monthly-income'] or 5500 }}">
         Monthly Hours Worked:
-        <input type="text" name="monthly-hours" placeholder="140 (22 days 9-5)" class="form-control"
+        <input type="text" name="monthly-hours" placeholder="140" class="form-control"
             value="{{ request.form['monthly-hours'] or 140 }}">
         Price:
-        <input type="text" name="price" placeholder="10 (McD's meal)" class="form-control" 
+        <input type="text" name="price" placeholder="10" class="form-control" 
             value="{{ request.form['price'] or 10 }}">
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
